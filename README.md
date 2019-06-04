@@ -4,17 +4,31 @@
 
 By the end of the class, the following should be working:
 
-* Prometheus scraping itself and a Node Exporter endpoint
-* Alert Manager sending notifications to ... ?
-* Prometheus sending alerts to Alert Manager
-* A Grafana dashboard visualizing things in Prometheus
+* Prometheus scraping itself and a Node Exporter endpoint.
+* Prometheus sending alerts to Alert Manager.
+* Alert Manager sending notifications to a webhook of your choice.
+* A Grafana dashboard visualizing things in Prometheus.
+
+This class will show how to manually do all of these things. T
+
+## Requirements
+
+To complete this class on your own, you will need a Linux server to play with. The class will be taught using Ubuntu 18.04, but anything with SystemD will likely work. This can be a virtual machine on your laptop.
+
+If taking this class in person, I can optionally provide you with a cloud VM for the duration of the class.
 
 ## Sections
 
-### Install Prometheus
+### [Install Prometheus](01_Install_Prometheus.md)
 
-How to: Install Prometheus, scrape itself, and scrape another endpoint
-Show: How to query Prometheus
+We will be:
+
+* Installing Prometheus from a pre-built binary
+* Configuring SystemD to launch Prometheus on system startup
+* Configuring Prometheus to scrape itself
+* View the Prometheus UI
+
+### Install Node Exporter
 
 ### Install Alert Manager
 
