@@ -21,14 +21,16 @@ If taking this class in person, I can optionally provide you with a cloud VM for
 
 ### [Install Prometheus](01_Install_Prometheus.md)
 
-We will be:
-
 * Installing Prometheus from a pre-built binary
 * Configuring SystemD to launch Prometheus on system startup
 * Configuring Prometheus to scrape itself
 * View the Prometheus UI
 
-### Install Node Exporter
+### [Install Node Exporter](02_Install_Node_Exporter.md)
+
+* Install Node Exporter
+* Configure Prometheus to scrape Node Exporter
+* Run some queries to view Node Exporter metrics
 
 ### Install Alert Manager
 

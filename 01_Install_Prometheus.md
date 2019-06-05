@@ -1,6 +1,6 @@
 # Install Prometheus
 
-## Install from a pre-built binary
+## Installation Steps
 
 Let's install Prometheus from a pre-built binary
 
@@ -32,12 +32,12 @@ Let's install Prometheus from a pre-built binary
     [Install]
     WantedBy=multi-user.target
     ```
-5. Reload `systemd` and enable & start the `prometheus` service.
+5. Reload `systemd`, then enable & start the `prometheus` service.
 6. Point your web browser to http://<server>:9090/.
     * Navigate to Status -> Targets. You should see prometheus scraping itself.
     * Go to the Graph tab. Enter `scrape_duration_seconds` in the query field. Click Execute. The Console tab will show the current value. The Graph tab will show a graph of the data.
 
-## Lab Commands
+## Installation Commands
 
 ```
 # Step 1
@@ -70,14 +70,14 @@ After=network-online.target
 Type=simple
 User=prometheus
 Group=prometheus
-ExecReload=/bin/kill -HUP $MAINPID
-ExecStart=/usr/local/bin/prometheus \
---config.file=/etc/prometheus.yml \
---storage.tsdb.path=/var/lib/prometheus \
---storage.tsdb.retention.time=30d \
---storage.tsdb.retention.size=0 \
---web.console.libraries=/etc/prometheus/console_libraries \
---web.console.templates=/etc/prometheus/consoles \
+ExecReload=/bin/kill -HUP \$MAINPID
+ExecStart=/usr/local/bin/prometheus \\
+--config.file=/etc/prometheus.yml \\
+--storage.tsdb.path=/var/lib/prometheus \\
+--storage.tsdb.retention.time=30d \\
+--storage.tsdb.retention.size=0 \\
+--web.console.libraries=/etc/prometheus/console_libraries \\
+--web.console.templates=/etc/prometheus/consoles \\
 --web.listen-address=0.0.0.0:9090
 SyslogIdentifier=prometheus
 Restart=always
