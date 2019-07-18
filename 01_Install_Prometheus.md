@@ -33,7 +33,7 @@ Let's install Prometheus from a pre-built binary
     WantedBy=multi-user.target
     ```
 5. Reload `systemd`, then enable & start the `prometheus` service.
-6. Point your web browser to http://<server>:9090/.
+6. Point your web browser to http://`<server>`:9090/.
     * Navigate to Status -> Targets. You should see prometheus scraping itself.
     * Go to the Graph tab. Enter `scrape_duration_seconds` in the query field. Click Execute. The Console tab will show the current value. The Graph tab will show a graph of the data.
 

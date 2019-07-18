@@ -32,10 +32,12 @@ If taking this class in person, I can optionally provide you with a cloud VM for
 * Configure Prometheus to scrape Node Exporter
 * Run some queries to view Node Exporter metrics
 
-### Install Alert Manager
+### [Install Alertmanager](03_Install_Alertmanager.md)
 
-How to: Install Alert Manager, configure Prometheus to scrape it, how to have Alert Manager send notifications
-Show: Alerting in practice
+* Install Alertmanager
+* Configure Prometheus to send alerts to Alertmanager
+* Configure an alert in Prometheus
+* Configure Alertmanager to send alerts to Mattermost!
 
 ### Grafana
 

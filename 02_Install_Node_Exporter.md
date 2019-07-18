@@ -30,9 +30,9 @@ Let's install Node Exporter on the same server as Prometheus.
     WantedBy=multi-user.target
     ```
 5. Reload `systemd`, then enable & start the `node_exporter` service.
-6. Point your web browser to http://<server>:9100/metrics and take a moment to read what is exported.
+6. Point your web browser to http://`<server>`:9100/metrics and take a moment to read what is exported.
 7. Edit `/etc/prometheus.yml`. Add a new job named `node_exporter`. Add a static target of `localhost:9100`. Reload the `prometheus` service.
-8. Go to the Prometheus UI (http://<server>:9090), click Status -> Targets. Verify node_exporter is being scraped.
+8. Go to the Prometheus UI (http://`<server>`:9090), click Status -> Targets. Verify node_exporter is being scraped.
 9. Go the graph tab in Prometheus and run the following queries:
     * Percentage of memory used: `1 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes)`
     * Filesystem free: `node_filesystem_avail_bytes{fstype!="rootfs",fstype!="tmpfs"} / node_filesystem_size_bytes{fstype!="rootfs",fstype!="tmpfs"}`
