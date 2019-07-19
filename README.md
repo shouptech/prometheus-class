@@ -39,7 +39,8 @@ If taking this class in person, I can optionally provide you with a cloud VM for
 * Configure an alert in Prometheus
 * Configure Alertmanager to send alerts to Mattermost!
 
-### Grafana
+### [Grafana](04_Grafana.md)
 
-How to: Install grafana, point to a prometheus data source, create a dashboard
-Show: Visualizations!
+* Install Grafan
+* Add Prometheus as a data source
+* Create a dashboard!

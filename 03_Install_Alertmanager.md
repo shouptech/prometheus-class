@@ -35,6 +35,7 @@ What good is a monitoring system without alerts? That's what Alertmanager is for
       slack_configs:
       - api_url: <mattermost_webhook_url>
         send_resolved: true
+        pretext: "<Your Name>'s Prometheus"
     ```
 6. Reload `systemd`, then enable & start the `alertmanager` service.
 7. Point your web browser to http://`<server>`:9093/ and make sure the alertmanager UI loads
