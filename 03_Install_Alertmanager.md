@@ -192,7 +192,7 @@ alerting:
 
 rule_files:
   - "/etc/prometheus_alerts.yml"
-  - 
+
 # Step 10
 mike@prometheus:~$ sudo systemctl reload prometheus
 
