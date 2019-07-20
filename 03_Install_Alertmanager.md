@@ -181,6 +181,18 @@ Jul 18 02:43:27 prometheus alertmanager[3834]: level=info ts=2019-07-18T02:43:27
 Jul 18 02:43:27 prometheus alertmanager[3834]: level=info ts=2019-07-18T02:43:27.436Z caller=main.go:429 msg=Listening address=
 Jul 18 02:43:29 prometheus alertmanager[3834]: level=info ts=2019-07-18T02:43:29.418Z caller=cluster.go:648 component=cluster m
 
+# Step 9
+# In /etc/prometheus.yml, change the configuration for `alerting` and `rules_files` to be this:
+```
+alerting:
+  alertmanagers:
+  - static_configs:
+    - targets:
+      - localhost:9093
+
+rule_files:
+  - "/etc/prometheus_alerts.yml"
+```
 
 # Step 10
 mike@prometheus:~$ sudo systemctl reload prometheus
