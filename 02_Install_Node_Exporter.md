@@ -103,7 +103,6 @@ Jun 05 16:56:43 prometheus node_exporter[1918]: time="2019-06-05T16:56:43Z" leve
 Jun 05 16:56:43 prometheus node_exporter[1918]: time="2019-06-05T16:56:43Z" level=info msg=" - zfs" source="node_exporter.go:104"
 Jun 05 16:56:43 prometheus node_exporter[1918]: time="2019-06-05T16:56:43Z" level=info msg="Listening on 0.0.0.0:9100" source="node_exporter.go:170"
 
-mike@prometheus:~$ sudo systemctl reload prometheus.service
 
 # Step 6
 mike@prometheus:~$ sudo vi /etc/prometheus.yml
@@ -111,5 +110,7 @@ mike@prometheus:~$ sudo vi /etc/prometheus.yml
   - job_name: 'node_exporter'
     static_configs:
     - targets: ['localhost:9100']
+
+mike@prometheus:~$ sudo systemctl reload prometheus.service
 
 ```
