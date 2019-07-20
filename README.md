@@ -44,3 +44,14 @@ If taking this class in person, I can optionally provide you with a cloud VM for
 * Install Grafan
 * Add Prometheus as a data source
 * Create a dashboard!
+
+### [Automation Resources](05_Automation_Resources.md)
+
+* Ansible
+* Kubernetes
+* Service discovery
+* Grafana Provisioning
+
+# License
+
+This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
