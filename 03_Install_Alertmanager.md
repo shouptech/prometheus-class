@@ -4,7 +4,7 @@ What good is a monitoring system without alerts? That's what Alertmanager is for
 
 ## Steps
 
-1. On the server create a new user & group named `alertmanager`. Set the home directory to `/var/lib/prometheus` and the shell to `/usr/sbin/nologin`.
+1. On the server create a new user & group named `alertmanager`. Set the home directory to `/var/lib/alertmanager` and the shell to `/usr/sbin/nologin`.
 2. Go to https://prometheus.io/download/. Copy the URL for the latest Alertmanager version for your platform. Download this to your server.
 3. Extract the download tarball. Copy the `alertmanager`binary to `/usr/local/bin`. Copy `alertmanager.yml` to `/etc`. It's also a good idea to chown these to root.
 4. Create a file at `/etc/systemd/system/alertmanager.service` with the contents:
