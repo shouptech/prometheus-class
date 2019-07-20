@@ -76,6 +76,7 @@ Restart=always
 
 [Install]
 WantedBy=multi-user.target
+EOF
 
 # Step 5
 mike@prometheus:~$ sudo systemctl daemon-reload
@@ -101,6 +102,8 @@ Jun 05 16:56:43 prometheus node_exporter[1918]: time="2019-06-05T16:56:43Z" leve
 Jun 05 16:56:43 prometheus node_exporter[1918]: time="2019-06-05T16:56:43Z" level=info msg=" - xfs" source="node_exporter.go:104"
 Jun 05 16:56:43 prometheus node_exporter[1918]: time="2019-06-05T16:56:43Z" level=info msg=" - zfs" source="node_exporter.go:104"
 Jun 05 16:56:43 prometheus node_exporter[1918]: time="2019-06-05T16:56:43Z" level=info msg="Listening on 0.0.0.0:9100" source="node_exporter.go:170"
+
+mike@prometheus:~$ sudo systemctl reload prometheus.service
 
 # Step 6
 mike@prometheus:~$ sudo vi /etc/prometheus.yml
