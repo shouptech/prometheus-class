@@ -183,7 +183,7 @@ Jul 18 02:43:29 prometheus alertmanager[3834]: level=info ts=2019-07-18T02:43:29
 
 # Step 9
 # In /etc/prometheus.yml, change the configuration for `alerting` and `rules_files` to be this:
-```
+
 alerting:
   alertmanagers:
   - static_configs:
@@ -192,8 +192,7 @@ alerting:
 
 rule_files:
   - "/etc/prometheus_alerts.yml"
-```
-
+  - 
 # Step 10
 mike@prometheus:~$ sudo systemctl reload prometheus
 
