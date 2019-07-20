@@ -9,7 +9,7 @@ By the end of the class, the following should be working:
 * Alert Manager sending notifications to a webhook of your choice.
 * A Grafana dashboard visualizing things in Prometheus.
 
-This class will show how to manually do all of these things. T
+This class will show how to manually do all of these things.
 
 ## Requirements
 
@@ -41,7 +41,7 @@ If taking this class in person, I can optionally provide you with a cloud VM for
 
 ### [Grafana](04_Grafana.md)
 
-* Install Grafan
+* Install Grafana
 * Add Prometheus as a data source
 * Create a dashboard!
 
